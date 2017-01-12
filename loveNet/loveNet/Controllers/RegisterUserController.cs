@@ -26,20 +26,20 @@ namespace loveNet.Controllers
         //MVCs modelbinder gör om string till den typ man anger som parameter
         //frågetecknet efter "int" i parameterlistan betyder att den kan vara null
         [HttpPost]
-        public ActionResult Register(string user_firstname, string user_lastname, int? user_age)
+        public ActionResult Register(string firstname, string lastname, int? age, string bio)
         {
             ViewBag.userRegistrated = "Du har lagts till som användare, nu kan du logga in";
             //man kan nå dom olika form values på samma sätt som elementen i en array.
             //istället för myArray[i], skriver man Request.Form[name på den formrad man vill komma åt]
-            string _firstName = user_firstname;
+           
             //man bör kunna skicka med "form" som en parameter till en repositorymetod som
             //lägger till användare i databasen
 
             //återställ form med viewbag. Egentligen är det en bättre lösning att använda formvalidation
-            ViewBag.VB_firstname = user_firstname;
-            ViewBag.VB_lastname = user_lastname;
-            ViewBag.VB_age = user_age;
-            var form = Request.Form;
+            //ViewBag.VB_firstname = user_firstname;
+            //ViewBag.VB_lastname = user_lastname;
+            //ViewBag.VB_age = user_age;
+           // var form = Request.Form;
             return View();
         }
     }
