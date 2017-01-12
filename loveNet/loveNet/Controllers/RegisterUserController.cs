@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Protocols.WSTrust;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using loveNet.Models;
 
 namespace loveNet.Controllers
 {
@@ -25,8 +27,9 @@ namespace loveNet.Controllers
         //Parametrarna måste inte vara string (trots att värdet i formfields är string) 
         //MVCs modelbinder gör om string till den typ man anger som parameter
         //frågetecknet efter "int" i parameterlistan betyder att den kan vara null
+        //Istället för att specificera alla parametrar kan man använda Entry
         [HttpPost]
-        public ActionResult Register(string firstname, string lastname, int? age, string bio)
+        public ActionResult Register(User user)
         {
             ViewBag.userRegistrated = "Du har lagts till som användare, nu kan du logga in";
             //man kan nå dom olika form values på samma sätt som elementen i en array.

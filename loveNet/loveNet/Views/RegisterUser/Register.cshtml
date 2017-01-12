@@ -1,4 +1,5 @@
-﻿@using System.Web.Mvc.Html
+﻿@model loveNet.Models.User
+@using System.Web.Mvc.Html
 
 @{
     ViewBag.Title = "Register";
@@ -13,18 +14,18 @@
 {
     <fieldset>
         <legend>Your basic info</legend>
-        @Html.Label("firstname","Firstname") @*om man vill lägga till en klass---> ,new {@class = "klassens namn"}*@
-        @Html.TextBox("firstname", null)
+        @Html.LabelFor(m => m.FirstName) @*om man vill lägga till en klass---> ,new {@class = "klassens namn"}*@
+        @Html.TextBoxFor(m => m.FirstName)
        
         <br />
-        @Html.Label("lastname", "Lastname")
-        @Html.TextBox("lastname", null)
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
         
         <br />
-        @Html.Label("age", "Age") 
-        @Html.TextBox("age", null)
+        @Html.LabelFor(m => m.Age) 
+        @Html.TextBoxFor(m => m.Age)
         <br />
-        <label>Town</label>
+        @*<label>Town</label>
         <select id="town" name="user_town">
             <option value="Stockholm">Stockholm</option>
             <option value="Göteborg">Göteborg</option>
@@ -73,7 +74,7 @@
             <br />
             <legend>Your profile</legend>
             @Html.Label("bio", "Biography")
-            @Html.TextArea("bio")
+            @Html.TextArea("bio")*@
            
             <br />
             <br />
