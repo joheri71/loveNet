@@ -22,8 +22,11 @@ namespace loveNet.Controllers
         //[ActionName("Register")]
         //Parametrarna känns igen från formfields, kallas "modelbinding". Eftersom denna metod har en annan signatur
         //än den ovan kan man använda samma namn (overloading). Parametern ska matcha formfields "name"
+        //Parametrarna måste inte vara string (trots att värdet i formfields är string) 
+        //MVCs modelbinder gör om string till den typ man anger som parameter
+        //frågetecknet efter "int" i parameterlistan betyder att den kan vara null
         [HttpPost]
-        public ActionResult Register(string user_firstname, string user_lastname, int user_age)
+        public ActionResult Register(string user_firstname, string user_lastname, int? user_age)
         {
             ViewBag.userRegistrated = "Du har lagts till som användare, nu kan du logga in";
             //man kan nå dom olika form values på samma sätt som elementen i en array.
