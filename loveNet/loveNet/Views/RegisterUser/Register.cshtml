@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@ViewBag.userRegistrated
+
+<body>
+<div>
+    <form method="post">
+        
+        <fieldset>
+            <legend>Your basic info</legend>
+            <label for="firstname">Firstname:</label>
+            <input type="text" id="firstname" name="user_firstname">
+            <br />
+            <label for="lastname">Lastname:</label>
+            <input type="text" id="lastname" name="user_lastname" />
+            <br />
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="user_age" />
+            <br />
+            <label>Town</label>
+            <select id="town" name="user_town">
+                <option value="Stockholm">Stockholm</option>
+                <option value="Göteborg">Göteborg</option>
+                <option value="Malmö">Malmö</option>
+                <option value="Örebro">Örebro</option>
+                <option value="Kiruna">Kiruna</option>
+            </select>
+            <br />
+            <br />
+            <label>Looking for:</label>
+            <br />
+            <input type="radio" id="looking_for_men" value="looking_for_men" name="user_lookingfor" />
+            <label for="looking_for_men">Men</label>
+            <br />
+            <input type="radio" id="looking_for_women" value="looking_for_women" name="user_lookingfor" />
+            <label for="looking_for_women">Women</label>
+            <br />
+            <br />
+            <label>Interests:</label>
+            <br />
+            <input type="checkbox" id="friluftsliv" value="intrest_friluftsliv" name="user_intrest" />
+            <label for="friluftsliv">Friluftsliv</label>
+            <input type="checkbox" id="film" value="intrest_film" name="user_intrest" />
+            <label for="film">Film</label>
+            <input type="checkbox" id="frimärken" value="intrest_frimärken" name="user_intrest" />
+            <label for="frimärken">Frimärken</label>
+            <br/>
+            <input type="checkbox" id="datorer" value="intrest_datorer" name="user_intrest" />
+            <label for="datorer">Datorer</label>
+            <input type="checkbox" id="djur" value="intrest_djur" name="user_intrest" />
+            <label for="djur">Djur</label>
+            <input type="checkbox" id="sång" value="intrest_sång" name="user_intrest" />
+            <label for="sång">Sång</label>
+            <br/>
+            <input type="checkbox" id="krogen" value="intrest_krogen" name="user_intrest" />
+            <label for="krogen">Krogen</label>
+            <input type="checkbox" id="tv-spel" value="intrest_tv-spel" name="user_intrest" />
+            <label for="tv-spel">Tv-spel</label>
+            <input type="checkbox" id="träning" value="intrest_träning" name="user_intrest" />
+            <label for="träning">Träning</label>
+
+
+        </fieldset>
+
+        <fieldset>
+            <br />
+            <legend>Your profile</legend>
+            <label for="bio">Biography:</label>
+            <br/>
+            <textarea id="bio" name="user_bio" rows="5" cols="100"></textarea>
+            <br/>
+            <br />
+            
+        </fieldset>
+        <br />
+
+        <button type="submit">Registrera uppgifter</button>
+
+    </form>
+
+    
+
+
+</div>
+    
+
+</body>
