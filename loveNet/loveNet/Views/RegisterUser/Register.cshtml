@@ -14,13 +14,13 @@
         <fieldset>
             <legend>Your basic info</legend>
             <label for="firstname">Firstname:</label>
-            <input type="text" id="firstname" name="user_firstname">
+            <input type="text" id="firstname" name="user_firstname" value="@ViewBag.VB_firstname">
             <br />
             <label for="lastname">Lastname:</label>
-            <input type="text" id="lastname" name="user_lastname" />
+            <input type="text" id="lastname" name="user_lastname" value="@ViewBag.VB_lastname" />
             <br />
             <label for="age">Age:</label>
-            <input type="number" id="age" name="user_age" />
+            <input type="number" id="age" name="user_age" value="@ViewBag.VB_age"/>
             <br />
             <label>Town</label>
             <select id="town" name="user_town">
